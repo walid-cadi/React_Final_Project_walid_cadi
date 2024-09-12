@@ -3,7 +3,7 @@ import React from "react";
 export const Footer = () => {
   return (
     <footer className="bg-[#f0f0f0]">
-      <div className="mx-auto grid max-w-screen-xl gap-y-8 gap-x-12 mt-[20vh]  py-10 md:grid-cols-2 xl:flex justify-around xl:px-10 ">
+      <div className="mx-auto grid max-w-screen-xl gap-y-8 gap-x-12 mt-[7vh]  py-10 md:grid-cols-2 xl:flex justify-around xl:px-10 ">
         <div className="max-w-sm">
           <div className="mb-6 flex h-12 items-center space-x-2">
             <span className="text-lg font-semibold">GET IN TOUCH</span>
