@@ -6,7 +6,7 @@ import { HiOutlineShoppingBag } from "react-icons/hi";
 
 export const NavBar = () => {
   return (
-    <nav className="w-full bg-white flex items-center my-1 justify-between px-10 py-8 fixed top-0 z-50 ">
+    <nav className="w-full bg-white flex items-center my-1 shadow-md shadow-gray-400 justify-between px-10 py-8 fixed top-0 z-50 ">
       <img src={images.logo} className="my-1" alt="logo" />
       <div className="flex items-center gap-[25vw] ">
         <div className="hidden lg:block lg:flex items-center gap-[4vw]">
@@ -31,7 +31,7 @@ export const NavBar = () => {
             About
           </Link>
           <Link
-            to=""
+            to="/contact"
             className="text-gray-600 text-lg hover:border-b-2 border-gray-600">
             Contact
           </Link>
