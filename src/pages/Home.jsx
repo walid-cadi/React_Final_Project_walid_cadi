@@ -1,5 +1,6 @@
 import Carousel from "./components/Carousel";
 import { Items } from "./components/Items";
+import LookBook from "./components/LookBook";
 import SectionBlog from "./components/secBlog";
 import SecondCarousel from "./components/secondCarousel";
 
@@ -9,6 +10,7 @@ function Home() {
       <Carousel />
       <Items />
       <SecondCarousel />
+      <LookBook />
       <SectionBlog />
     </div>
   );
