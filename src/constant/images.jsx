@@ -18,4 +18,10 @@ export default {
   imgCarousel1: require("../assets/images/carousel1.jpg"),
   imgCarousel2: require("../assets/images/carousel2.jpg"),
   imgCarousel3: require("../assets/images/carousel3.webp"),
+  item1: require("../assets/images/banner-02.jpg"),
+  item2: require("../assets/images/banner-05.webp"),
+  item3: require("../assets/images/banner-03.webp"),
+  item4: require("../assets/images/banner-07.jpg"),
+  item5: require("../assets/images/banner-04.jpg"),
+  item6: require("../assets/images/banner-09.webp"),
 };
