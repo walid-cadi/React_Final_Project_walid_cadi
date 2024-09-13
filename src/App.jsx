@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import { Blogs } from "./pages/Blogs";
+import { Shop } from "./pages/Shop";
 
 function App() {
   return (
@@ -13,9 +14,10 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/blog" element={<Blogs />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/blog" element={<Blogs />} />
       </Routes>
       <Footer />
     </>
