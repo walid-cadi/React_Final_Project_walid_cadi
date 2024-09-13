@@ -11,12 +11,12 @@ export const NavBar = () => {
       <div className="flex items-center gap-[25vw] ">
         <div className="hidden lg:block lg:flex items-center gap-[4vw]">
           <Link
-            to=""
+            to="/"
             className="text-gray-600 text-lg hover:border-b-2 border-gray-600">
             Home
           </Link>
           <Link
-            to=""
+            to="/shop"
             className="text-gray-600 text-lg hover:border-b-2 border-gray-600">
             Shop
           </Link>

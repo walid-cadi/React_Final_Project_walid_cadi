@@ -15,4 +15,7 @@ export default {
   product6: require("../assets/images/product6.webp"),
   product7: require("../assets/images/product7.webp"),
   product8: require("../assets/images/product8.webp"),
+  imgCarousel1: require("../assets/images/carousel1.jpg"),
+  imgCarousel2: require("../assets/images/carousel2.jpg"),
+  imgCarousel3: require("../assets/images/carousel3.webp"),
 };
