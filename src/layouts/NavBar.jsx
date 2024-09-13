@@ -21,7 +21,7 @@ export const NavBar = () => {
             Shop
           </Link>
           <Link
-            to=""
+            to="/blog"
             className="text-gray-600 text-lg hover:border-b-2 border-gray-600">
             Blog
           </Link>

@@ -1,7 +1,7 @@
 
 function Home() {
   return (
-    <div>
+    <div className="mt-[20vh]">
       <h1>Home Page</h1>
     </div>
   );
