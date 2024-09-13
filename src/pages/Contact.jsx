@@ -2,7 +2,7 @@ import { images } from "../constant";
 
 function Contact() {
   return (
-    <div className="mt-[20vh] w-full flex flex-col">
+    <div className="mt-[14.5vh] w-full flex flex-col">
       <div className="relative h-[35vh] ">
         <img src={images.bg_contact} className="w-[100%] h-[100%]" alt="" />
         <h1 className="text-6xl font-bold absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-white">

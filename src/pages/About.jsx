@@ -2,7 +2,7 @@ import { images } from "../constant";
 
 function About() {
   return (
-    <div className="mt-[20vh] w-full flex flex-col ">
+    <div className="mt-[14.5vh] w-full flex flex-col ">
       <img src={images.bg_about} className="" alt="" />
       <div className="py-10 xl:flex justify-center gap-x-10 ">
         <div className="w-[25vw] h-[60vh] overflow-hidden ">
