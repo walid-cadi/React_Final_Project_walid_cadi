@@ -5,6 +5,8 @@ import { MdOutlineNavigateNext } from "react-icons/md";
 import Data from "../../json/data.json";
 import "../../index.css";
 import { images } from "../../constant";
+import Swal from "sweetalert2";
+import { MyAppContext } from "../../context";
 
 function SecondCarousel() {
   const settings = {
@@ -27,6 +29,20 @@ function SecondCarousel() {
     sliderRef.current.slickPrev();
   };
 
+  const { product, setProduct } = MyAppContext();
+
+  const addToCart = (id) => {
+    if (id) {
+      const getProduct = Data.find((e) => e.id == id);
+      product.push(getProduct);
+      Swal.fire({
+        title: getProduct.title,
+        text: "Your Product Is Added To Cart",
+        icon: "success",
+      });
+    }
+  };
+
   return (
     <div className="slider-container overflow-hidden pt-10 relative pb-28">
       <h2 className="text-center text-3xl font-bold mb-14">
@@ -43,7 +59,11 @@ function SecondCarousel() {
                 className="h-[52vh] w-[17vw] object-cover group-hover:opacity-40 transition-opacity duration-300"
               />
               <div className="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <button className="absolute  top-72 translate-x-[-50%]  left-1/2 transform  -translate-y-[50%] opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-in-out h-[6vh] w-[10vw] bg-black text-white rounded-full font-medium font-sans hover:bg-red-500">
+              <button
+                onClick={() => {
+                  addToCart(product.id);
+                }}
+                className="absolute  top-72 translate-x-[-50%]  left-1/2 transform  -translate-y-[50%] opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-in-out h-[6vh] w-[10vw] bg-black text-white rounded-full font-medium font-sans hover:bg-red-500">
                 Add to Cart
               </button>
             </div>
