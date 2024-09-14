@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { images } from "../../constant";
 
 import React from "react";
@@ -13,7 +14,7 @@ export const Items = () => {
             className="h-[100%] w-[100%] object-cover hover:scale-110 duration-500"
           />
           <button className="absolute bottom-5 left-[50%] translate-x-[-50%] bg-white opacity-95 text-black py-1 px-4 hover:bg-red-400 duration-500 font-mono text-sm">
-            DRESSES
+            <Link to="/shop">DRESSES</Link>
           </button>
         </div>
         <div className="relative overflow-hidden w-[24vw] h-[40vh]">
@@ -22,7 +23,7 @@ export const Items = () => {
             className="h-[100%] w-[100%] object-cover hover:scale-110 duration-500 "
           />
           <button className="absolute bottom-5 left-[50%] translate-x-[-50%] bg-white opacity-95 hover:bg-red-400 duration-500 text-black py-1 px-4 font-mono text-sm">
-            SUNGLASSES
+            <Link to="/shop">SUNGLASSES</Link> 
           </button>
         </div>
       </div>
@@ -35,7 +36,7 @@ export const Items = () => {
             className="h-[100%] w-[100%] object-cover hover:scale-110 duration-500 "
           />
           <button className="absolute bottom-5 left-[50%] translate-x-[-50%] bg-white opacity-95 hover:bg-red-400 duration-500 text-black py-1 px-4 font-mono text-sm">
-            WATCHES
+            <Link to="/shop">WATCHES</Link> 
           </button>
         </div>
         <div className="relative overflow-hidden w-[24vw] h-[70vh]">
@@ -44,7 +45,7 @@ export const Items = () => {
             className="h-[100%] w-[100%] object-cover hover:scale-110 duration-500 "
           />
           <button className="absolute bottom-5 left-[50%] translate-x-[-50%] bg-white opacity-95 hover:bg-red-400 duration-500 text-black py-1 px-4 font-mono text-sm">
-            FOOTWEAR
+            <Link to="/shop">FOOTWEAR</Link> 
           </button>
         </div>
       </div>
@@ -57,7 +58,7 @@ export const Items = () => {
             className="h-[100%] w-[100%] object-cover hover:scale-110 duration-500 "
           />
           <button className="absolute bottom-5 left-[50%] translate-x-[-50%] bg-white opacity-95 hover:bg-red-400 duration-500 text-black py-1 px-4 font-mono text-sm">
-            BAGS
+            <Link to="/shop">BAGS</Link>
           </button>
         </div>
         <div className="relative overflow-hidden w-[24vw] h-[40vh]">
@@ -66,7 +67,7 @@ export const Items = () => {
             className="h-[100%] w-[100%] object-cover hover:scale-110 duration-500 "
           />
           <button className="absolute bottom-5 left-[50%] translate-x-[-50%] bg-white opacity-95 hover:bg-red-400 duration-500 text-black py-1 px-4 font-mono text-sm">
-            ACCESSORIES
+            <Link to="/shop">ACCESSORIES</Link> 
           </button>
         </div>
       </div>
