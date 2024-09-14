@@ -37,7 +37,7 @@ export const NavBar = () => {
           </Link>
         </div>
         <div className="flex items-center">
-          <Link to="">
+          <Link to="/auth">
             <FaRegUserCircle className="w-11 h-7 text-gray-400  pe-5 border-e-2 border-gray-400" />
           </Link>
           <HiOutlineShoppingBag className="w-11 h-7 text-gray-400 ps-5 cursor-pointer" />

@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import { Blogs } from "./pages/Blogs";
 import { Shop } from "./pages/Shop";
 import { ShopInfo } from "./pages/ShopInfo";
+import { Auth } from "./pages/auth/Auth";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/blog" element={<Blogs />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/auth" element={<Auth />} />
       </Routes>
       <Footer />
     </>
