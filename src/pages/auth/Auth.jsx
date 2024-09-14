@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 export const Auth = () => {
-    const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <div className="mt-[14.5vh] p-20 flex gap-x-8">
       <div className="p-7 border-gray-400 border-2 w-[40vw]">
