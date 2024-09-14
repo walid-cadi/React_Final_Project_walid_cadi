@@ -26,4 +26,5 @@ export default {
   item6: require("../assets/images/banner-09.webp"),
   LookBook: require("../assets/images/banner-08.jpg"),
   bg_shop: require("../assets/images/shop_top.webp"),
+  bg_shoppingCart: require("../assets/images/shoppingCart_top.webp"),
 };

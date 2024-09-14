@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 import { images } from "../constant";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaRegUserCircle } from "react-icons/fa";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 import { MyAppContext } from "../context";
 
 export const NavBar = () => {
+  const navigate = useNavigate()
   const { product, setProduct } = MyAppContext();
+  const { subtotal, setSubtotal } = MyAppContext();
   const [Cart, setCart] = useState(false);
   const toggleCart = () => {
     setCart(!Cart);
   };
-  const subtotal = product.reduce((total, item) => total + item.price, 0);
+  setSubtotal(product.reduce((total, item) => total + item.price, 0))
 
   const deleteProduct = (index) => {
     product.splice(index, 1);
@@ -77,7 +79,7 @@ export const NavBar = () => {
                   />
                   <div className="flex-1 pl-4">
                     <p className="hover:text-red-400 duration-500">{e.title}</p>
-                    <p> {e.price}</p>
+                    <p> ${e.price}</p>
                   </div>
                   <button
                     onClick={() => {
@@ -95,7 +97,7 @@ export const NavBar = () => {
               </div>
               {/* Buttons */}
               <div className="flex gap-4 mt-6">
-                <button className="bg-black text-white px-7 py-3 rounded-full hover:bg-red-500 duration-500">
+                <button onClick={() => {navigate("/shoppingCart")}} className="bg-black text-white px-7 py-3 rounded-full hover:bg-red-500 duration-500">
                   View Cart
                 </button>
                 {/* <button className="bg-black text-white px-7 py-3 rounded-full  hover:bg-red-500 duration-500">

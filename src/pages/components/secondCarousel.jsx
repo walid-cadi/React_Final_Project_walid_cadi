@@ -71,7 +71,7 @@ function SecondCarousel() {
               <p className="titleprdct hover:text-red-400 duration-300">
                 {product.title}
               </p>
-              <p className="text-gray-500">{`${product.price}`}</p>
+              <p className="text-gray-500">${product.price.toFixed(2)}</p>
             </div>
           </div>
         ))}

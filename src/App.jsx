@@ -11,6 +11,7 @@ import { ShopInfo } from "./pages/ShopInfo";
 import { Auth } from "./pages/auth/Auth";
 import { Register } from "./pages/auth/Register";
 import { MyProvider } from "./context";
+import { ShoppingCart } from "./pages/ShoppingCart";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/shop/:id" element={<ShopInfo />} />
+          <Route path="/shoppingCart" element={<ShoppingCart />} />
           <Route path="/blog" element={<Blogs />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
