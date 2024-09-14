@@ -1,10 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import { images } from "../constant";
 import Data from "../json/data.json";
 import { useNavigate } from "react-router-dom";
 
 export const Shop = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const [searchProduct, setSearchProduct] = useState(Data);
+  const [categories, setCategories] = useState("All");
+
+  const handleSearch = (text) => {
+    const newTab = [...Data];
+    let result = newTab.filter((ele) =>
+      ele.title.toLowerCase().includes(text.toLowerCase())
+    );
+    if (text) {
+      setSearchProduct(result);
+    } else {
+      setSearchProduct(Data);
+    }
+  };
+  const CategoryChange = (category) => {
+    const newTab = [...Data];
+    if (category != "All") {
+      const filterCategories = newTab.filter((e) => e.categories == category);
+      setSearchProduct(filterCategories);
+    } else {
+      setSearchProduct(newTab);
+    }
+  };
   return (
     <div className="mt-[14.5vh] w-full flex flex-col">
       <div className="relative h-[35vh] ">
@@ -15,17 +38,41 @@ export const Shop = () => {
       </div>
       <div className="flex justify-evenly gap-x-7 p-10">
         <div className="flex gap-y-5 items-start flex-col p-6">
+          <div>
+            <input
+              type="text"
+              className="px-8 py-5 border-gray-400 border-solid border-2"
+              placeholder="Search..."
+              onChange={(e) => {
+                handleSearch(e.target.value);
+              }}
+            />
+          </div>
           <h1 className="text-2xl font-extrabold">Categories</h1>
-          <button className="hover:text-[#ef4444]">All</button>
-          <button className="hover:text-[#ef4444]">Shirts</button>
-          <button className="hover:text-[#ef4444]">Pants</button>
-          <button className="hover:text-[#ef4444]">Jackets</button>
+          <button
+            className="hover:text-[#ef4444]"
+            onClick={() => CategoryChange("All")}>
+            All
+          </button>
+          <button
+            className="hover:text-[#ef4444]"
+            onClick={() => CategoryChange("Shirts")}>
+            Shirts
+          </button>
+          <button
+            className="hover:text-[#ef4444]"
+            onClick={() => CategoryChange("Pants")}>
+            Pants
+          </button>
+          <button
+            className="hover:text-[#ef4444]"
+            onClick={() => CategoryChange("Jackets")}>
+            Jackets
+          </button>
         </div>
-        <div>
-          <input type="text" className="" placeholder="Search..." />
-        </div>
+
         <div className="flex flex-wrap justify-center gap-y-5  w-[60%] ">
-          {Data.map((product, index) => (
+          {searchProduct.map((product, index) => (
             <div key={index} className="px-2 ">
               <div className="relative group overflow-hidden bg-white  h-[52vh] w-[17vw] hover:bg-gray-500 transition-all duration-500">
                 <img
@@ -39,7 +86,9 @@ export const Shop = () => {
                 </button>
               </div>
               <div className="font-sans text-gray-500 mt-4">
-                <p onClick={()=>navigate(`/shop/${product.id}`)} className="cursor-pointer hover:text-red-400 duration-300">
+                <p
+                  onClick={() => navigate(`/shop/${product.id}`)}
+                  className="cursor-pointer hover:text-red-400 duration-300">
                   {product.title}
                 </p>
                 <p className="text-gray-500">{`${product.price}`}</p>
